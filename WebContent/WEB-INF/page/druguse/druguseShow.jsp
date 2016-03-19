@@ -24,6 +24,7 @@
 		<link rel="stylesheet" href="${ctx}/assets/css/ace.min.css" />
 		<link rel="stylesheet" href="${ctx}/assets/css/ace-rtl.min.css" />
 		<link rel="stylesheet" href="${ctx}/assets/css/ace-skins.min.css" />
+		<link href="${ctx}/assets/js/toastr-master/toastr.css" rel="stylesheet" type="text/css" />
 		<script src="${ctx}/assets/js/ace-extra.min.js"></script>
 </head>
 <body>
@@ -482,7 +483,7 @@
 										<jsp:param value="druguse?id=${id }&search_id=${search_id }" name="url"/>
 									</jsp:include>
 								</div>
-
+								<input type="hidden" id="i" value="${i }"/>
 
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
@@ -519,6 +520,10 @@
 					}
 			
 			var id = $("#dialog").html();
+			var i = $("#i").val();
+			if(i==1){
+				toastr.success('药品（设备）使用信息修改成功！');
+			}
 			if(id==null){
 				toastr.error('抱歉，没有查到相关信息！');
 			}
@@ -552,6 +557,7 @@
 				});
 			}
 		</script>
+		
 		<script src="${ctx}/assets/js/layer/layer.js"></script>
 		<script type="text/javascript">
 			if("ontouchend" in document) document.write("<script src='${ctx}/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");

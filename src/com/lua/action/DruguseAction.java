@@ -31,6 +31,13 @@ public class DruguseAction extends ActionSupport {
 	private List<Druguse> list;
 	private int id;
 	private String search_id;
+	private int i;
+	public int getI() {
+		return i;
+	}
+	public void setI(int i) {
+		this.i = i;
+	}
 	public int getId() {
 		return id;
 	}
@@ -112,6 +119,7 @@ public class DruguseAction extends ActionSupport {
 		default:
 			break;
 		}
+		i=i;
 		return "drugShow";
 	}
 	
@@ -123,7 +131,7 @@ public class DruguseAction extends ActionSupport {
 	
 	public String modifyDrugUseAfter() throws Exception{
 		DrugUseService drugUseService = new DrugUseService();
-		int i = drugUseService.modifyDrugUseAfter(druguse);
+		i = drugUseService.modifyDrugUseAfter(druguse);
 		return "modifyDrugUseAfter";
 	}
 

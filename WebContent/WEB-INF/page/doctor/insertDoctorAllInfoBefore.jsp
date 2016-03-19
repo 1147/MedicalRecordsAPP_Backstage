@@ -21,6 +21,7 @@
 		<link rel="stylesheet" href="${ctx}/assets/css/ace-rtl.min.css" />
 		<link rel="stylesheet" href="${ctx}/assets/css/ace-skins.min.css" />
 		<link rel="stylesheet" href="${ctx}/assets/SweetAlert/sweetalert.css" />
+		<link rel="stylesheet" href="${ctx}/assets/css/style.css" />
 		<script src="${ctx}/assets/js/ace-extra.min.js"></script>
 </head>
 <body>
@@ -425,30 +426,30 @@
 								<div class="hr dotted"></div>
 								<form action="doctorAllInfo!insertDoctorAllInfoAfter" id="form_doc" method="post" class="form-horizontal" enctype="multipart/form-data" role="form">
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">医生编号:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>医生编号:</label>
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="医生编号" name="doctorBaseInfo.doctorInfo_ID" class="col-xs-10 col-sm-5"/>
+											<input type="text" id="form-field-1" placeholder="医生编号" nullmsg="请输入账号！" datatype="s11-11" errormsg="账号必须为11个字符！" name="doctorBaseInfo.doctorInfo_ID" class="col-xs-10 col-sm-5"/>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">医生密码:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>医生密码:</label>
 										<div class="col-sm-9">
-											<input type="password" id="form-field-1" placeholder="密码" name="doctorBaseInfo.doctorInfo_pwd" class="col-xs-10 col-sm-5"/>
+											<input type="password" id="form-field-1" placeholder="密码" nullmsg="请输入密码！" datatype="*6-11" errormsg="密码最少为6个字符，最多为20个字符！" name="doctorBaseInfo.doctorInfo_pwd" class="col-xs-10 col-sm-5"/>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">医生姓名:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>医生姓名:</label>
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="姓名" name="doctorBaseInfo.doctorInfo_name" class="col-xs-10 col-sm-5"/>
+											<input type="text" id="form-field-1" placeholder="姓名" nullmsg="请输入姓名！" datatype="s2-10" errormsg="医生姓名最少为2个字符，最多为20个字符！" name="doctorBaseInfo.doctorInfo_name" class="col-xs-10 col-sm-5"/>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">医生性别:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>医生性别:</label>
 										<div class="col-sm-9">
-											<select  class="select" style="width:347px;"  name="doctorBaseInfo.doctorInfo_sex">
+											<select  class="select" style="width:347px;"  name="doctorBaseInfo.doctorInfo_sex" nullmsg="请选择医生性别！" errormsg="请选择医生性别！">
 																	<option value="1">男</option>		
 																	<option value="0">女</option>		
 														</select>
@@ -456,58 +457,59 @@
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">出生日期:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>出生日期:</label>
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="出生日期" name="doctorBaseInfo.doctorInfo_birthday" class="col-xs-10 col-sm-5"/>
+											<input type="text" id="form-field-1" placeholder="出生日期" nullmsg="请选择出生日期！"  name="doctorBaseInfo.doctorInfo_birthday" class="col-xs-10 col-sm-5"/>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">家庭住址:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>家庭住址:</label>
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="家庭住址" name="doctorBaseInfo.doctorInfo_address" class="col-xs-10 col-sm-5"/>
+											<input type="text" id="form-field-1" placeholder="家庭住址"  datatype="s0-40" errormsg="家庭住址最多为10个字符！" name="doctorBaseInfo.doctorInfo_address" class="col-xs-10 col-sm-5"/>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">学历:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>学历:</label>
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="学历" name="doctorBaseInfo.doctorInfo_record" class="col-xs-10 col-sm-5"/>
+											<input type="text" id="form-field-1" placeholder="学历" datatype="s0-20" errormsg="学历最多为20个字符！"  name="doctorBaseInfo.doctorInfo_record" class="col-xs-10 col-sm-5"/>
+												&nbsp;&nbsp;&nbsp;&nbsp;<span id="msgdemo2" style="margin-left:30px;"></span>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">医院职位:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>医院职位:</label>
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="职位" name="doctorBaseInfo.doctorInfo_position" class="col-xs-10 col-sm-5"/>
+											<input type="text" id="form-field-1" placeholder="职位" datatype="s0-20" errormsg="医院职位最多为20个字符！"  name="doctorBaseInfo.doctorInfo_position" class="col-xs-10 col-sm-5"/>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">头像:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>头像:</label>
 										<div class="col-sm-9">
-											<input  type="file" id="id-input-file-2" name="file" />
+											<input  type="file" id="id-input-file-2" name="file" nullmsg="请选择头像！" />
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">联系方式:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>联系方式:</label>
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="联系方式" name="doctorBaseInfo.doctorInfo_phone" class="col-xs-10 col-sm-5"/>
+											<input type="text" id="form-field-1" placeholder="联系方式" datatype="m"  name="doctorBaseInfo.doctorInfo_phone" class="col-xs-10 col-sm-5"/>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Email:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>Email:</label>
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="Email" name="doctorBaseInfo.doctorInfo_email" class="col-xs-10 col-sm-5"/>
+											<input type="text" id="form-field-1" placeholder="Email" datatype="e" name="doctorBaseInfo.doctorInfo_email" class="col-xs-10 col-sm-5"/>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">坐诊类型:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>坐诊类型:</label>
 										<div class="col-sm-9">
-											<select name="doctorBaseInfo.doctorInfo_type" style="width:347px;" class="select">
+											<select name="doctorBaseInfo.doctorInfo_type" style="width:347px;" class="select" nullmsg="请选择坐诊类型！" errormsg="请选择坐诊类型！">
 												<s:iterator value="listRegistrationfees">
 													<option value="${doctorInfo_type }" >${doctorInfo_typeName}</option>		
 												</s:iterator>
@@ -516,23 +518,23 @@
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">专治:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>专治:</label>
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="擅长治疗的病症" name="doctorBaseInfo.doctorInfo_disease" class="col-xs-10 col-sm-5"/>
+											<input type="text" id="form-field-1" placeholder="擅长治疗的病症" datatype="s0-50" errormsg="专治最多为50个字符！" name="doctorBaseInfo.doctorInfo_disease" class="col-xs-10 col-sm-5"/>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">办公室:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>办公室:</label>
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="办公室" name="doctorBaseInfo.doctorInfo_Oaddress" class="col-xs-10 col-sm-5"/>
+											<input type="text" id="form-field-1" placeholder="办公室" datatype="s0-40" errormsg="办公室最多为40个字符！" name="doctorBaseInfo.doctorInfo_Oaddress" class="col-xs-10 col-sm-5"/>
 										</div>
 									</div>
 									<div class="space-4"></div>
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">所属科室:</label>
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"><span style="color:#b20202;">* </span>所属科室:</label>
 										<div class="col-sm-9">
-											<select name="departmentDeploy.minordepartment_ID" class="select" style="width:347px;" >
+											<select name="departmentDeploy.minordepartment_ID" class="select" style="width:347px;" nullmsg="请选择所属科室！" errormsg="请选择所属科室！">
 													<s:iterator value="listMin">
 															<option value="${minordepartment_ID}">${minordepartment_name }</option>		
 													</s:iterator>
@@ -552,6 +554,8 @@
 												<i class="icon-undo bigger-110"></i>
 												重置
 											</button>
+											
+											
 										</div>
 											</div>
 								</form>
@@ -600,6 +604,20 @@
         });
 
   		</script>
+  		<script type="text/javascript">
+		$(function () {
+			$(".form-horizontal").Validform({
+				tiptype:function(msg,o,cssctl){
+					var objtip=$("#msgdemo2");
+					cssctl(objtip,o.type);
+					objtip.text(msg);
+				},
+			});
+
+		});
+		</script>
+  		<script src="${ctx}/assets/js/jquery-2.0.3.min.js"></script>
+		<script src="${ctx}/assets/js/Validform_v5.3.2_min.js"></script>
 		<script src="${ctx}/assets/SweetAlert/sweetalert.min.js"></script>
 		<script type="text/javascript">
 			if("ontouchend" in document) document.write("<script src='${ctx}/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");

@@ -65,7 +65,7 @@
 		<action name="doctorVisit" class="com.lua.action.DoctorVisitAction">
 			<result name="doctorVisitShow">/WEB-INF/page/doctorVisit/doctorVisitShow.jsp</result>
 			<result name="modifyDoctorVisitBefore">/WEB-INF/page/doctorVisit/doctorVisitModifyBefore.jsp</result>
-			<result name="modifydoctorVisitAfter" type="redirect">doctorVisit</result>
+			<result name="modifydoctorVisitAfter" type="redirect">doctorVisit?i=${i}</result>
 		</action>
 		<action name="maindepartment" class="com.lua.action.MainDepartmentAction">
 			<result name="maindepartmentShow">/WEB-INF/page/department/departmentShow.jsp</result>
@@ -102,14 +102,14 @@
 		<action name="drug" class="com.lua.action.DrugAction">
 			<result name="drugShow">/WEB-INF/page/drug/drugShow.jsp</result>
 			<result name="modifyDrugBefore">/WEB-INF/page/drug/modifydrugBefore.jsp</result>
-			<result name="modifyDrugAfter" type="redirect">drug</result>
+			<result name="modifyDrugAfter" type="redirect">drug?i=${i}</result>
 			<result name="insertDrugBefore">/WEB-INF/page/drug/insertDrugBefore.jsp</result>
-			<result name="insertDrugAfter" type="redirect">drug</result>
+			<result name="insertDrugAfter" type="redirect">drug?i1=${i1}&amp;i2=${i2}</result>
 		</action>
 		<action name="druguse" class="com.lua.action.DruguseAction">
 			<result name="drugShow">/WEB-INF/page/druguse/druguseShow.jsp</result>
 			<result name="modifyDrugUseBefore">/WEB-INF/page/druguse/modifyDrugUseBefore.jsp</result>
-			<result name="modifyDrugUseAfter" type="redirect">druguse</result>
+			<result name="modifyDrugUseAfter" type="redirect">druguse?i=${i}</result>
 		</action>
 		<action name="pay" class="com.lua.action.PayAction">
 			<result name="payShow">/WEB-INF/page/pay/payShow.jsp</result>

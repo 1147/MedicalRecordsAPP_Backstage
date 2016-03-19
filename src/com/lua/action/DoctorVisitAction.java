@@ -33,6 +33,13 @@ public class DoctorVisitAction extends ActionSupport {
 	private List<DoctorVisit> list;
 	private int id;
 	private String search_id;
+	private int i;
+	public int getI() {
+		return i;
+	}
+	public void setI(int i) {
+		this.i = i;
+	}
 	public int getId() {
 		return id;
 	}
@@ -201,7 +208,7 @@ public class DoctorVisitAction extends ActionSupport {
 	
 	public String modifydoctorVisitAfter() throws Exception{
 		DoctorVisitService doctorVisitService = new DoctorVisitService();
-		doctorVisitService.modifyDoctorVisit(doctorVisit);
+		i = doctorVisitService.modifyDoctorVisit(doctorVisit);
 		return "modifydoctorVisitAfter";
 	}
 

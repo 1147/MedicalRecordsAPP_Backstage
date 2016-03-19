@@ -95,9 +95,10 @@ public class DoctorVisitService {
 		}
 		return doctorVisit;
 	}
-	public void modifyDoctorVisit(DoctorVisit doctorVisit) throws Exception{
+	public int modifyDoctorVisit(DoctorVisit doctorVisit) throws Exception{
 		doctorVisitDAO = new DoctorVisitDAOImpl();
 		int i = doctorVisitDAO.modifyDoctorVisit(doctorVisit);
+		return i;
 	}
 	public int deleteDoctVisit(String doctorInfo_ID) throws Exception{
 		doctorVisitDAO = new DoctorVisitDAOImpl();

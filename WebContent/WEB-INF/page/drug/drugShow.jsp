@@ -497,7 +497,9 @@
 										<jsp:param value="drug" name="url"/>
 									</jsp:include>
 								</div>
-
+								<input type="hidden" id="i" value="${i}">
+								<input type="hidden" id="i1" value="${i1}">
+								<input type="hidden" id="i2" value="${i2}">
 
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
@@ -540,8 +542,17 @@
 					}
 			
 			var id = $("#dialog").html();
+			var i = $("#i").val();
+			var i1 = $("#i1").val();
+			var i2 = $("#i2").val();
 			if(id==null){
 				toastr.error('抱歉，没有查到相关信息！');
+			}
+			if(i==1){
+				toastr.success('修改药品（设备）成功！');
+			}
+			if(i1==1 && i2==1){
+				toastr.success('增加药品（设备）成功！');
 			}
 		});
 		</script>

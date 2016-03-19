@@ -500,7 +500,7 @@
 										<jsp:param value="doctorVisit?id=${id }&search_id=${search_id }" name="url"/>
 									</jsp:include>
 								</div>
-
+								<input type="hidden" id="i" value="${i }">
 
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
@@ -542,7 +542,10 @@
 					  "hideMethod": "fadeOut"
 					}
 			var id = $("#dialog").html();
-			
+			var i = $("#i").val();
+			if(i==1){
+				toastr.success('坐诊时间表信息修改成功！');
+			}
 			if(id==null){
 				toastr.error('抱歉，没有查到相关信息！');
 			}

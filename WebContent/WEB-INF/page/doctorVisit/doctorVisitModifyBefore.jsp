@@ -445,7 +445,7 @@
 											<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 日期： </label>
 
 											<div class="col-sm-9">
-															<input type="text" name="doctorVisit.doctorVisit_date" data-date-format="yyyy-mm-dd" id="id-date-picker-1" class="form-control date-picker"  value="${doctorVisit.doctorVisit_date }" style="width:357px;" />
+												<input type="text" name="doctorVisit.doctorVisit_date" data-date-format="yyyy-mm-dd" id="id-date-picker-1" class="form-control date-picker"  value="${doctorVisit.doctorVisit_date }" style="width:357px;" />
 											</div>
 										</div>
 										<div class="space-4"></div>

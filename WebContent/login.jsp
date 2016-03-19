@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="${ctx}/assets/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="${ctx}/assets/css/ace.min.css" />
 		<link rel="stylesheet" href="${ctx}/assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="${ctx}/assets/css/style.css" />
 </head>
 <body class="login-layout">
 		<div class="main-container">
@@ -44,18 +45,19 @@
 
 											<div class="space-6"></div>
 
-											<form action="MedicalRecordsAPP_Backstage/dep/ment/login">
+											<form action="MedicalRecordsAPP_Backstage/dep/ment/login" class="demoform">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="用户名" name="doctorBaseInfo.doctorInfo_ID"/>
+															<input type="text" class="form-control" placeholder="用户名" datatype="s11-11" errormsg="请输入正确的账号！" name="doctorBaseInfo.doctorInfo_ID"/>
 															<i class="icon-user"></i>
 														</span>
+														
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="密码" name="doctorBaseInfo.doctorInfo_pwd"/>
+															<input type="password" class="form-control" placeholder="密码" datatype="s3-5" errormsg="请输入正确的密码！" name="doctorBaseInfo.doctorInfo_pwd"/>
 															<i class="icon-lock"></i>
 														</span>
 													</label>
@@ -67,9 +69,9 @@
 															<input type="checkbox" class="ace" />
 															<span class="lbl">&nbsp;记住我</span>
 														</label>
-
 														<s:submit class="width-35 pull-right btn btn-sm btn-primary" value="登录" method="login">
 														</s:submit>
+														<span id="msgdemo2" style="margin-left:30px;"></span>
 													</div>
 
 													<div class="space-4"></div>
@@ -235,7 +237,20 @@
  window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
+		<script type="text/javascript">
+		$(function () {
+			$(".demoform").Validform({
+				tiptype:function(msg,o,cssctl){
+					var objtip=$("#msgdemo2");
+					cssctl(objtip,o.type);
+					objtip.text(msg);
+				},
+			});
 
+		});
+		</script>
+		<script src="${ctx}/assets/js/jquery-2.0.3.min.js"></script>
+		<script src="${ctx}/assets/js/Validform_v5.3.2_min.js"></script>
 		<script type="text/javascript">
 			if("ontouchend" in document) document.write("<script src='${ctx}/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>

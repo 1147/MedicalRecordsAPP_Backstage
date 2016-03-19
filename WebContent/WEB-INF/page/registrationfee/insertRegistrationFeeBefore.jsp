@@ -113,7 +113,7 @@
 					</div><!-- #sidebar-shortcuts -->
 
 					<ul class="nav nav-list">
-						<li class="active">
+						<li>
 							<a href="index.html">
 								<i class="icon-dashboard"></i>
 								<span class="menu-text"> 控制台 </span>
@@ -248,7 +248,7 @@
 								</li>
 							</ul>
 						</li>
-						<li   class="active open">
+						<li>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-list"></i>
 								<span class="menu-text"> 医院科室管理 </span>
@@ -257,7 +257,7 @@
 							</a>
 
 							<ul class="submenu">
-								<li class="active">
+								<li>
 									<a href="${ctx}/dep/ment/maindepartment">
 										<i class="icon-double-angle-right"></i>
 										科室基本信息管理

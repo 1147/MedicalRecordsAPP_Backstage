@@ -31,6 +31,9 @@ public class DrugAction extends ActionSupport {
 	private List<Drug> list;
 	private int id;
 	private String search_id; 
+	private int i;
+	private int i1;
+	private int i2;
 	public int getId() {
 		return id;
 	}
@@ -39,6 +42,24 @@ public class DrugAction extends ActionSupport {
 	}
 	public String getSearch_id() {
 		return search_id;
+	}
+	public int getI() {
+		return i;
+	}
+	public void setI(int i) {
+		this.i = i;
+	}
+	public int getI1() {
+		return i1;
+	}
+	public void setI1(int i1) {
+		this.i1 = i1;
+	}
+	public int getI2() {
+		return i2;
+	}
+	public void setI2(int i2) {
+		this.i2 = i2;
 	}
 	public void setSearch_id(String search_id) {
 		this.search_id = search_id;
@@ -138,7 +159,7 @@ public class DrugAction extends ActionSupport {
 	
 	public String modifyDrugAfter() throws Exception{
 		DrugService drugService = new DrugService();
-		int i = drugService.modifyDrugAfter(drug);
+		i = drugService.modifyDrugAfter(drug);
 		return "modifyDrugAfter";
 	}
 	
@@ -154,8 +175,8 @@ public class DrugAction extends ActionSupport {
 		String hospital_ID = service.findHospitalByID(doctorInfo_ID);
 		
 		DrugService drugService = new DrugService();
-		int i = drugService.insertDrugAfter(drug);
-		int i2 = drugService.insertHos(drug.getDrug_ID(),hospital_ID);
+		i1 = drugService.insertDrugAfter(drug);
+		i2 = drugService.insertHos(drug.getDrug_ID(),hospital_ID);
 		return "insertDrugAfter";
 	}
 }
